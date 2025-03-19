@@ -23,9 +23,6 @@ class Solution {
                 firstIndex = otherIndex + 1;
             }
         }
-        if( sArrays.length != firstIndex) {
-            result ++;
-        }
-        return result;
+        return sArrays.length != firstIndex ? result+1 : result;
     }
 }
