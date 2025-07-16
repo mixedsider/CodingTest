@@ -6,10 +6,10 @@ public class Main {
 
     Scanner sc = new Scanner(System.in);
 
-    int x = sc.nextInt();
-    int y = sc.nextInt();
-    
-    int result = (x + y) * (x - y);
+    long x = sc.nextInt();
+    long y = sc.nextInt();
+
+    Long result = (x + y) * (x - y);
 
     System.out.println(result);
   }
