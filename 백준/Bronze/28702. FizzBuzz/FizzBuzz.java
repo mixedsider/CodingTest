@@ -10,27 +10,29 @@ public class Main {
       str[i] = sc.nextLine();
     }
 
-    int isNum = Integer.MAX_VALUE;
+    int numStart = -1;
+    int numIndex = Integer.MAX_VALUE;
 
     for(int i = 0; i < str.length; i++) {
       try {
-        int num = Integer.parseInt(str[i]);
-        isNum = Math.min(i, isNum);
-      } catch (Exception e) {
-        continue;
-      }
+        numStart = Integer.parseInt(str[i]);
+        numIndex = i;
+        break;
+      } catch (Exception e) {}
     }
-    String next = next(Integer.parseInt(str[isNum]) + (3 - isNum));
+    String next = next(numStart + (3 - numIndex));
 
     System.out.println(next);
   }
 
   public static String next(int num) {
-    if (num % 3 == 0 && num % 5 == 0) {
+    if (num % 15 == 0) {
       return "FizzBuzz";
-    } else if (num % 3 == 0) {
+    }
+    if (num % 3 == 0) {
       return "Fizz";
-    } else if (num % 5 == 0) {
+    }
+    if (num % 5 == 0) {
       return "Buzz";
     }
     return String.valueOf(num);
