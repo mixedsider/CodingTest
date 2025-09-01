@@ -4,6 +4,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Main {
   public static void main(String[] args) throws IOException {
@@ -22,7 +23,7 @@ public class Main {
     }
 
     Collections.sort(list);
-
+    
     double sum = 0;
     for( int i = cutNum; i < n - cutNum; i++ ) {
       sum += list.get(i);
